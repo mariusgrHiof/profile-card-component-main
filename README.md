@@ -50,7 +50,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-I'm going to enhance my HTML and CSS skills by continue creating more sites and javaScript to make the sites interactive.
+I'm going to enhance my HTML and CSS skills by continue creating more sites and add javaScript to make the sites interactive.
 
 ### Useful resources
 
