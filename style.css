@@ -12,18 +12,155 @@
   --dark-grey: hsl(0, 0%, 59%);
 }
 
-/* Font size (name and stats): 18px --> 1.125 rem */
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
+  background-image: url('./images/bg-pattern-top.svg'),
+    url('./images/bg-pattern-bottom.svg');
+  background-color: var(--dark-cyan);
+  background-position: top -600px left -250px, bottom -600px right -230px;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: 70%;
+  font-size: 1.125rem;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.dark-grey {
+  color: var(--dark-grey);
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 2em;
+}
+
+.lower-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -30px;
+}
+
+.lower__info-name {
+  font-weight: 700;
+}
+
+.lower__info-city {
+  display: block;
+  text-align: center;
+  margin-top: 0.3em;
+  font-size: 1rem;
+}
+
+.upper__profile {
+  position: relative;
+}
+
+.upper__profile-bg {
+  width: 100%;
+}
+
+.upper__profile-img {
+  position: relative;
+}
+
+.upper__profile-img img {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  position: relative;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-stats {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__stats-followers--title,
+.user__stats-likes--title,
+.user__stats-photos--title {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.35em;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
+  color: #fff;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 376px) {
+  body {
+    background-position: top -100px left -200px, bottom right -200px;
+    background-size: 100%;
+  }
+
+  .upper__profile-img img {
+    width: 40%;
+  }
+
+  .lower__info-name {
+    font-size: 0.85rem;
+  }
+
+  .lower__info-city,
+  .lower__info-age {
+    font-size: 0.85rem;
+  }
+  .user__stats-followers--count,
+  .user__stats-likes--count,
+  .user__stats-photos--count {
+    font-size: 0.75rem;
+  }
+  .user__stats-followers--title,
+  .user__stats-likes--title,
+  .user__stats-photos--title {
+    font-size: 0.5rem;
+  }
+  .attribution {
+    font-size: 0.75rem;
+    line-height: 150%;
+  }
 }
